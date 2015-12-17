@@ -1,4 +1,4 @@
-from flask import redirect, url_for
+from flask import redirect, url_for, render_template
 from . import blue
 
 @blue.route('/')
@@ -7,4 +7,4 @@ def index():
 
 @blue.route('/home')
 def home():
-    return 'Hello!'
+    return render_template('home.html')
